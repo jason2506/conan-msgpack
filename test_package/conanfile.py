@@ -12,7 +12,7 @@ class TestMsgPackConan(ConanFile):
     version = '0.1.0'
 
     requires = (
-        'msgpack/any@{username}/{channel}'.format(
+        'msgpack/0.1.0@{username}/{channel}'.format(
             username=username,
             channel=channel,
         ),

@@ -8,7 +8,7 @@ from conans import ConanFile, CMake, tools
 class MsgPackConan(ConanFile):
 
     name = 'msgpack'
-    version = 'any'
+    version = '0.1.0'
     url = 'https://github.com/jason2506/conan-msgpack'
     license = 'BSL-1.0'
 
