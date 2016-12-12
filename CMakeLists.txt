@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.1)
 
-option(PACKAGE_VERSION "original package version" "2.0.0")
-project(msgpack VERSION ${PACKAGE_VERSION})
+project(conan-msgpack VERSION 0.1.0)
 
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
+option(PACKAGE_VERSION "original package version" "2.0.0")
 add_subdirectory("./msgpack-c-cpp-${PACKAGE_VERSION}")

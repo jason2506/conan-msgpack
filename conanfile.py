@@ -62,13 +62,6 @@ class MsgPackConan(ConanFile):
         os.unlink(filename)
 
     def build(self):
-        folder = 'msgpack-c-cpp-{}'.format(self.options.version)
-        tools.replace_in_file(
-            '{}/CMakeLists.txt'.format(folder),
-            'PROJECT (msgpack)',
-            '',
-        )
-
         extra_opts = []
         extra_opts.append('-DPACKAGE_VERSION="{}"'.format(
             self.options.version,
