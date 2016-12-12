@@ -20,7 +20,15 @@ class MsgPackConan(ConanFile):
     generators = ('cmake', 'txt', 'env')
     build_policy = 'always'
     options = {
-        'version': 'ANY',
+        'version': [
+            '2.0.0',
+            '1.4.2', '1.4.1', '1.4.0',
+            '1.3.0',
+            '1.2.0',
+            '1.1.0',
+            '1.0.1', '1.0.0',
+            '0.5.9',
+        ],
         'use_cxx11': [True, False],
         'use_32bit': [True, False],
         'use_boost': [True, False],
@@ -28,7 +36,7 @@ class MsgPackConan(ConanFile):
         'enable_shared': [True, False],
     }
     default_options = (
-        'version=2.0.0',
+        'version={last_version}'.format(last_version=options['version'][0]),
         'use_cxx11=False',
         'use_32bit=False',
         'use_boost=False',
