@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.1)
 
-project(msgpack VERSION 0.1.0)
+project(MsgPack VERSION 0.1.0)
 
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
