@@ -6,7 +6,7 @@ include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 set(CMAKE_SKIP_RPATH OFF)
 
-option(MSGPACK_VERSION "msgpack version" "2.0.0")
+option(MSGPACK_VERSION "msgpack version" "2.1.0")
 find_package(msgpack ${MSGPACK_VERSION} REQUIRED)
 
 if(${MSGPACK_VERSION} VERSION_LESS "1.0.0")
